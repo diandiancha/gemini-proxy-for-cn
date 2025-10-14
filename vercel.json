@@ -1,0 +1,11 @@
+{
+    "regions": [
+        "hnd1"
+    ],
+    "rewrites": [
+        {
+            "source": "/:path*",
+            "destination": "https://generativelanguage.googleapis.com/:path*"
+        }
+    ]
+}

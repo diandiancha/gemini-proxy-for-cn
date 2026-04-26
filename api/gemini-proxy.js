@@ -4,6 +4,7 @@ const UPSTREAM_ORIGIN = 'https://generativelanguage.googleapis.com';
 const UPSTREAM_TIMEOUT_MS = 120000;
 const ALLOWED_PATH_PREFIXES = ['/v1/', '/v1alpha/', '/v1beta/'];
 const HOP_BY_HOP_REQ_HEADERS = new Set([
+  'authorization',
   'host',
   'connection',
   'content-length',

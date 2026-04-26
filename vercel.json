@@ -1,11 +1,14 @@
 {
-    "regions": [
-        "hnd1"
-    ],
-    "rewrites": [
-        {
-            "source": "/:path*",
-            "destination": "https://generativelanguage.googleapis.com/:path*"
-        }
-    ]
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "functions": {
+    "api/gemini-proxy.js": {
+      "regions": ["hnd1"]
+    }
+  },
+  "rewrites": [
+    {
+      "source": "/:path*",
+      "destination": "/api/gemini-proxy?path=:path*"
+    }
+  ]
 }

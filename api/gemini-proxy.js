@@ -91,6 +91,11 @@ function readRequestBody(req) {
 
 export default async function handler(req, res) {
   try {
+    if (req.method === 'GET' && (req.url === '/favicon.ico' || req.url === '/favicon.png')) {
+      res.status(204).end();
+      return;
+    }
+
     if (req.method === 'OPTIONS') {
       res.status(204).end();
       return;
